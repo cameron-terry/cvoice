@@ -1,0 +1,272 @@
+html {
+    font-family: "Andale Mono", serif;
+    height: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #949191;
+    color: white;
+}
+
+td {
+    text-align: center;
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container_left{
+    display:inline-block;
+    height: 100%;
+    width: 30%;
+}
+
+#cVoice_container{
+    display: inline-block;
+    height: 100%;
+    width: 367px;
+}
+
+#cVoice_control{
+    display: block;
+    height: 250px;
+    width: 367px;
+}
+
+#background_highlight{
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: #ededed;
+    border-right: 1px solid #b0b0b0;
+}
+
+#title_div{
+    height: 5%;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#user_chord_text_input {
+    position:relative;
+    width: 206px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#enable_seventh {
+    float:right;
+    display: inline-block;
+    height: 30px;
+    width: 148px;
+    font-size: 10px;
+    border: 2px solid black;
+    border-bottom-right-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+#key_div {
+    border: 1px solid black;
+    padding-top: 3px;
+    background-color: #b0f4ff;
+    text-align: center;
+}
+
+#input_key {
+    width: 100%;
+}
+
+#input_key tr:nth-child(even){background-color: #f2f2f2;}
+
+#piano_container {
+    position:absolute;
+    height: 200px;
+    border: 5px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow:hidden;
+}
+
+#chord_input_div {
+    height: 210px;
+    width: 200px;
+    border: 3px solid black;
+}
+
+#chord_input_info_div {
+    height: 226px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 2%;
+    margin-bottom: 10px;
+}
+
+#chord_input{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    resize:none;
+}
+
+#chord_input_key {
+    font-family: "Andale Mono", serif;
+    font-weight:bold;
+}
+
+.input_control_button {
+    display: inline-block;
+    position:relative;
+    width: 50%;
+    height: 100%;
+}
+
+#extra_controls {
+    width: 367px;
+    position:absolute;
+    top: 390px;
+}
+
+#chord_speed_range{
+    left: calc(50%);
+}
+
+#chord_input_buttons {
+    height: 40px;
+}
+
+#chord_input_container_div {
+    width: 206px;
+    background-color: #b0f4ff;
+}
+
+#chord_input_title {
+    text-align: center;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+#chord_info_div {
+    position:absolute;
+    padding-top: 3px;
+    font-weight:bold;
+    font-size: 22px;
+    border-left: 2px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    text-align: center;
+    width: 39%;
+    height: 34px;
+    background-color: #fdffeb;
+    display:inline-block;
+    opacity: 0.8;
+}
+
+#seventh_checkbox{
+    height: 20px;
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 9px;
+}
+
+#seventh_chord_enable_text{
+    position:absolute;
+    margin-top: 9px;
+    display: inline-block;
+}
+
+#chord_speed_info{
+    background-color:#f0f0f0;
+    font-size:14px;
+}
+
+#reset{
+    display: inline-block;
+    height:33px;
+    width:70px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 15px;
+}
+
+#clear_button{
+    background-color: #cc6262;
+}
+
+#key_additional_info{
+    border-top:3px dashed grey;
+    border-bottom: 1px solid black;
+    background-color: #d4d4d4;
+}
+
+#reset_icon{
+    position: absolute;
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    bottom: 5px;
+    margin-left: 8px;
+}
+
+.chord_input_icon{
+    position: absolute;
+    font-size: 30px;
+    height: 30px;
+    width: 40px;
+    top: 1px;
+    margin-left: 25px;
+    color: #d6d6d6;
+}
+
+.slidecontainer {
+    background-color: #e6e6e6;
+    border: 2px solid black;
+}
+
+.button {
+  background-color: #88B04B;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    font-family: "Andale Mono", serif;
+  border: 1px solid black;
+}
+
+.key_text {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 3px;
+}
+
+.whitenote {
+    height: 100%;
+    width: 50px;
+    background: white;
+    float: left;
+    border-right: 1px solid black;
+    position:relative;
+}
+
+.blacknote {
+    position:absolute;
+    height:65%;
+    width:55%;
+    z-index:1;
+    background:#777;
+    left:71%;
+}

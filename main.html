@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>cVoice</title>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.37/Tone.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="container_left">
+            <div id='background_highlight'>
+                <div id="title_div">
+                    <span id="title"><u>cVoice</u></span>
+                </div>
+                <div id="user_chord_text_input">
+                    <div id='chord_input_info_div'>
+                        <div id="key_div">
+                            <span id='chord_input_key'>Key</span><br>
+                        </div>
+                        <div>
+                            <table id="input_key">
+                                <tr>
+                                    <th>Input</th>
+                                    <th>Chord Type</th>
+                                </tr>
+                                <tr>
+                                    <td>^</td>
+                                    <td>major</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>minor</td>
+                                </tr><tr>
+                                    <td>+</td>
+                                    <td>augmented</td>
+                                </tr><tr>
+                                    <td>o</td>
+                                    <td>diminished</td>
+                                </tr><tr>
+                                    <td>sus</td>
+                                    <td>suspended</td>
+                                </tr><tr>
+                                    <td>7</td>
+                                    <td><div style="font-size: 10px;">7th (shell voicing)</div></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><div style="font-size: 10px;">6th (shell voicing)</div></td>
+                                </tr>
+                            </table>
+                            <div id='key_additional_info'>
+                                <span style='font-size: 14px;'>No<span class="key_text">^/-/+/o</span> means dominant</span><br>
+                                <span style='font-size: 14px;'>No<div style="display:inline-block; margin-left: 15px;"><span class="key_text">+/o</span> 7th chords (yet)</div></span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chord_input_container_div">
+                        <div id="chord_input_title">
+                            <span style="font-weight: bold"> Chord Input </span>
+                        </div>
+                        <div id='chord_input_div'>
+                            <label for="chord_input"></label><textarea id="chord_input">A-7 D7 Ab-7 Db7 F#-7 B7 E^7 Eo E-7 A7 Eb-7 Ab7 D-7 G+ C^7</textarea>
+                        </div>
+                    </div>
+                    <div id="chord_input_buttons">
+                        <button class="button input_control_button" type="button" id="play_button" style="float: left; border-left: 3px solid black;"><div class="chord_input_icon">►</div></button>
+                        <button class="button input_control_button" type="button" id="clear_button" style="float: right; border-right: 3px solid black;"><div class="chord_input_icon" id="cancel_input_icon">✕</div></button>
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="margin-top:2px; display: inline-block;">
+                            <label for="chord_speed_range"></label><input type="range" min="60" max="300" value="150" class="slider" step="5" id="chord_speed_range">
+                        </div>
+                        <div style="display: inline-block;">
+                            <div id="chord_speed_info"><span id="chord_speed_value">150</span> bpm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cVoice_container">
+            <div style="margin-top: 50%; margin-left: 8%">
+                <div id='cVoice_control'>
+                    <div id='piano_container'>
+                    </div>
+                    <div id='extra_controls'>
+                        <button class="button" type="button" id="reset"><div id="reset_icon">↺</div></button>
+                        <div id='chord_info_div'>
+                            <span id='chord_tonality'></span>
+                        </div>
+                        <div id="enable_seventh">
+                            <div id="seventh_checkbox">
+                                <label for="seventh"></label><input type="checkbox" id="seventh" name="seventh" value="Seventh">
+                            </div>
+                            <div id="seventh_chord_enable_text">
+                                <span>Enable 7th chords</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="music.js"></script>
+
+    </body>
+</html>
