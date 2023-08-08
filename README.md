@@ -1,6 +1,7 @@
 # cVoice
 https://github.com/cameron-terry/cvoice/assets/19367078/df99ea8b-8795-48ed-9b39-543c2af9f134
 
+try it at https://cameron-terry.github.io/cvoice/
 ## about
 
 cVoice automatically voices chords based on user input.
